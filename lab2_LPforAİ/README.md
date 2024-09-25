@@ -63,6 +63,11 @@ class SimpleNode(Node):
     def __init__(self):
         super().__init__('pyperplan_node')
         self.get_logger().info('pyperplan is ready on machine doruk@dorukvn...')
+
+        '''
+        Here goes the domain and the test etc...
+        '''
+
         self.create_timer(2.0, self.cleanShutdown)
     
     def cleanShutdown(self):
