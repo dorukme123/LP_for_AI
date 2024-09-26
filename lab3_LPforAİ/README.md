@@ -53,13 +53,13 @@
 )
 ```
 #### 1.b Использование Pyperplan для решения задачa STRIPS:
-- Я передал файлы домена и задачи в [robot_planner.py]() Pyperplan для генерации плана, используя алгоритм поиска A* (astar) с эвристикой 'hff' для поиска среди действий и состояний. Таким образом, Pyperplan сгенерировал действия, которые робот мог бы выполнить для достижения цели. План -> [problem.pddl.soln]()
+- Я передал файлы домена и задачи в [robot_planner.py](https://github.com/dorukme123/LP_for_AI/blob/main/lab3_LPforA%C4%B0/robot_planning_pkg/robot_planning_pkg/robot_planner.py) Pyperplan для генерации плана, используя алгоритм поиска A* (astar) с эвристикой 'hff' для поиска среди действий и состояний. Таким образом, Pyperplan сгенерировал действия, которые робот мог бы выполнить для достижения цели. План -> [problem.pddl.soln](https://github.com/dorukme123/LP_for_AI/blob/main/lab3_LPforA%C4%B0/robot_planning_pkg/problem.pddl.soln)
 ```
 (move robot1 locationa locationb)
 (move robot1 locationb locationc)
 ```
 #### 1.c Создание узла и его выполнение:
-- Я распарсил план, сгенерированный Pyperplan, и отправил команды в Gazebo. В [robot_planner.py]() выводы Pyperplan используются для извлечения отдельных действий 'move' и отправки их с помощью сообщений 'Twist' для передачи команд скорости роботу через топик ```/cmd_vel```.
+- Я распарсил план, сгенерированный Pyperplan, и отправил команды в Gazebo. В [robot_planner.py](https://github.com/dorukme123/LP_for_AI/blob/main/lab3_LPforA%C4%B0/robot_planning_pkg/robot_planning_pkg/robot_planner.py) выводы Pyperplan используются для извлечения отдельных действий 'move' и отправки их с помощью сообщений 'Twist' для передачи команд скорости роботу через топик ```/cmd_vel```.
 - Ключевые части:
 ```python
 def getPlan(self):
