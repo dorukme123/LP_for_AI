@@ -1,0 +1,2 @@
+(move robot1 locationa locationb)
+(move robot1 locationb locationc)
